@@ -1,0 +1,145 @@
+.main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(100% + 16px);
+        width: 75%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+}
+
+.article {
+    margin: 0 auto;
+    // max-width: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    h3 {
+        margin: 5px;
+    }
+
+    P {
+        max-width: 240px;
+        margin: unset;
+    }
+
+}
+
+.article {
+
+    /* tentative de barre de séparation black, remplacer par une methode after 
+        sur la div complète (+ direct responsive) */
+
+    // padding-bottom: 15px;
+    // border-bottom: solid 1px black;
+}
+
+
+
+.section {
+    &-form {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+
+    }
+
+    &-div {
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+
+    }
+
+    textarea {
+        // width: 180px;
+        // height: 4em;
+    }
+
+
+}
+
+.second-section {
+    padding: 16px 24px 32px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    /*faire en grid */
+    .main {
+
+        &-div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+
+    }
+
+    .section {
+        &-form {
+            max-width: 512px;
+            margin: 0 auto;
+
+
+        }
+
+        &-div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            width: 100%;
+
+
+            & input {
+                padding: 4px;
+                margin: 0;
+                font-size: 16px;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (min-width : 1024px) {
+    .main {
+
+        &-div {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 100%;
+        }
+
+
+
+    }
+
+}

@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color2;
+
+    &-nav {
+        margin: 5px;
+        
+        a {
+            text-decoration: none;
+            color: $color1;
+        }
+
+        &_about , &_contact , &_therms {
+            border-right: solid 1px $color1;
+            padding-right: 5px;
+        }
+    }
+    
+    &-p {
+        margin: 5px;
+    }
+}

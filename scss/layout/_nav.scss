@@ -1,0 +1,19 @@
+.header-nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+
+    p {
+        width: 80px;
+        margin: 0;
+        white-space: pre-line;
+
+    }
+}
+
+
+// mediaqueries de la nav barre 
+
+@media screen {
+    
+}

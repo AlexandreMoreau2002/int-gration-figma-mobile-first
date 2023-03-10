@@ -1,0 +1,251 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: #F8F9FA;
+}
+
+.fa-solid {
+  color: #0D6EFD;
+  font-size: 48px;
+}
+
+button {
+  background-color: #0D6EFD;
+  color: #D9D9D9;
+  border-radius: 2px;
+  border: none;
+  max-height: 40px;
+  min-width: 35px;
+  font-size: 1.1rem;
+}
+
+.header button {
+  margin: 0px 5px;
+  border-radius: 2px;
+}
+
+.header input {
+  border: unset;
+  border-radius: 2px;
+  background-color: #D9D9D9;
+  font-size: 18px;
+  padding: 4px;
+}
+.header input::placeholder {
+  color: #FFFFFF;
+}
+.header input:focus {
+  outline: none;
+}
+
+.section-form input {
+  border: unset;
+  border-radius: 2px;
+  background-color: #D9D9D9;
+  width: 100%;
+  font-size: 18px;
+  padding: 4px;
+}
+.section-form input::placeholder {
+  color: #FFFFFF;
+}
+.section-form input:focus {
+  outline: none;
+}
+
+textarea {
+  background-color: #D9D9D9;
+  border: unset;
+  border-radius: 3px;
+  padding: 1px 1px 1px 3px;
+  font-size: 1.1rem;
+  resize: none;
+  width: 100%;
+  height: 150px;
+}
+textarea:focus {
+  outline: none;
+}
+textarea::placeholder {
+  color: #F8F9FA;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+.header-nav p {
+  width: 80px;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.header {
+  background-image: url(/ressources/bg_maquette_figma.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+}
+.header-h1 {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+}
+.header-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5px;
+}
+.header-form:button {
+  background-color: lightblue;
+  align-self: center;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .header {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-h1 {
+    font-size: 1.6rem;
+    width: 65%;
+  }
+  .header-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* refaire le jeu flexbox et grid pour le positionnement du form */
+  }
+  .header-form input {
+    padding: 4px;
+    width: 135px !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    height: 300px;
+  }
+}
+.main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+  position: relative;
+}
+.main-div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 16px);
+  width: 75%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.article {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.article h3 {
+  margin: 5px;
+}
+.article P {
+  max-width: 240px;
+  margin: unset;
+}
+
+.article {
+  /* tentative de barre de séparation black, remplacer par une methode after 
+      sur la div complète (+ direct responsive) */
+}
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.section-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+.second-section {
+  padding: 16px 24px 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  /*faire en grid */
+  .main-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .section-form {
+    max-width: 512px;
+    margin: 0 auto;
+  }
+  .section-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+  .section-div input {
+    padding: 4px;
+    margin: 0;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main-div {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D9D9D9;
+}
+.footer-nav {
+  margin: 5px;
+}
+.footer-nav a {
+  text-decoration: none;
+  color: #0D6EFD;
+}
+.footer-nav_about, .footer-nav_contact, .footer-nav_therms {
+  border-right: solid 1px #0D6EFD;
+  padding-right: 5px;
+}
+.footer-p {
+  margin: 5px;
+}
