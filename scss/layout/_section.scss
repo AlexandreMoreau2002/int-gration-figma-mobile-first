@@ -21,7 +21,6 @@
 
 .article {
     margin: 0 auto;
-    // max-width: 275px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,47 +38,24 @@
 
 }
 
-.article {
-
-    /* tentative de barre de séparation black, remplacer par une methode after 
-        sur la div complète (+ direct responsive) */
-
-    // padding-bottom: 15px;
-    // border-bottom: solid 1px black;
-}
-
-
-
 .section {
     &-form {
-        
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 16px;
         padding: 16px;
-
         background: #FFFFFF;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
-
     }
 
     &-div {
-
         display: flex;
         flex-direction: column;
         width: 100%;
         gap: 16px;
-
     }
-
-    textarea {
-        // width: 180px;
-        // height: 4em;
-    }
-
-
 }
 
 .second-section {
@@ -88,7 +64,6 @@
 
 @media only screen and (min-width: 768px) {
 
-    /*faire en grid */
     .main {
 
         &-div {
@@ -98,17 +73,12 @@
             max-width: 800px;
             margin: 0 auto;
         }
-
-
-
     }
 
     .section {
         &-form {
             max-width: 512px;
             margin: 0 auto;
-
-
         }
 
         &-div {
@@ -116,7 +86,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 16px;
             width: 100%;
-
 
             & input {
                 padding: 4px;
@@ -129,7 +98,6 @@
 
 }
 
-
 @media only screen and (min-width : 1024px) {
     .main {
 
@@ -137,9 +105,5 @@
             grid-template-columns: repeat(3, 1fr);
             max-width: 100%;
         }
-
-
-
     }
-
 }

@@ -1,19 +1,15 @@
 .header-nav {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     margin: 10px;
+}
 
-    p {
+@media only screen and (max-width: 767px){
+    
+    .nav h1 {
         width: 80px;
         margin: 0;
         white-space: pre-line;
-
     }
-}
-
-
-// mediaqueries de la nav barre 
-
-@media screen {
-    
 }

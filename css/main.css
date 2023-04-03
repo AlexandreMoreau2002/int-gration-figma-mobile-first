@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -19,7 +18,7 @@ body {
 button {
   background-color: #0D6EFD;
   color: #D9D9D9;
-  border-radius: 2px;
+  border-radius: 4px;
   border: none;
   max-height: 40px;
   min-width: 35px;
@@ -79,15 +78,18 @@ textarea::placeholder {
 
 .header-nav {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   margin: 10px;
 }
-.header-nav p {
-  width: 80px;
-  margin: 0;
-  white-space: pre-line;
-}
 
+@media only screen and (max-width: 767px) {
+  .nav h1 {
+    width: 80px;
+    margin: 0;
+    white-space: pre-line;
+  }
+}
 .header {
   background-image: url(/ressources/bg_maquette_figma.jpg);
   background-position: center;
@@ -172,11 +174,6 @@ textarea::placeholder {
   margin: unset;
 }
 
-.article {
-  /* tentative de barre de séparation black, remplacer par une methode after 
-      sur la div complète (+ direct responsive) */
-}
-
 .section-form {
   display: flex;
   flex-direction: column;
@@ -193,12 +190,12 @@ textarea::placeholder {
   width: 100%;
   gap: 16px;
 }
+
 .second-section {
   padding: 16px 24px 32px;
 }
 
 @media only screen and (min-width: 768px) {
-  /*faire en grid */
   .main-div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
