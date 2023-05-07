@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
+    
+    <!-- formulaire avec axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/form.js"></script>
-    <script src="js/carousel.js" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- carousel slick  -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+    <link rel="stylesheet" href="/css/index.css">
     <title>Intégration figma mobile_first</title>
+    
 </head>
 <body>
     <nav class="nav header-nav"> 
@@ -25,24 +32,34 @@
         </form>
     </header>
     <main> 
-        <div class="main-div">
-            <article class="article1">
-                <i class="fa-solid fa-puzzle-piece"></i>
-                <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero hic at ullam laborum fuga, delectus dolor accusantium distinctio minus. Ab omnis ipsum doloremque quam. Deleniti doloremque explicabo sint iste.</p>
-            </article>
-            <article class="article2">
-                <i class="fa-solid fa-puzzle-piece"></i>
-                <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero hic at ullam laborum fuga, delectus dolor accusantium distinctio minus. Ab omnis ipsum doloremque quam. Deleniti doloremque explicabo sint iste.</p>
-            </article>
-            <article class="article3">
-                <i class="fa-solid fa-puzzle-piece"></i>
-                <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero hic at ullam laborum fuga, delectus dolor accusantium distinctio minus. Ab omnis ipsum doloremque quam. Deleniti doloremque explicabo sint iste.</p>
-            </article>
-            <button class="precedent">précedent</button>
-            <button class="suivant">suivant</button>
+        <div class="main-div slider">
+            <div class="div1">
+                <article class="article1">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero hic at ullam laborum fuga, delectus dolor accusantium distinctio minus. Ab omnis ipsum doloremque quam. Deleniti doloremque explicabo sint iste.</p>
+                </article>
+            </div>
+            <div class="div2">
+                <article class="article2">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero hic at ullam laborum fuga, delectus dolor accusantium distinctio minus. Ab omnis ipsum doloremque quam. Deleniti doloremque explicabo sint iste.</p>
+                </article>
+            </div>
+            <div class="div3">
+                <article class="article3">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero hic at ullam laborum fuga, delectus dolor accusantium distinctio minus. Ab omnis ipsum doloremque quam. Deleniti doloremque explicabo sint iste.</p>
+                </article>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+            <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>        
+            <script src="js/carousel.js"></script>
+
         </div>
         <section class='second-section'>
             <h2>Contact us</h2>
@@ -55,9 +72,9 @@
                 </div>
                     <textarea id="Text" name="text" placeholder="Type your message"></textarea>
                     <button id="Submit" type="submit">submit</button>
-            </form>
-        </section>
-    </main>
+                </form>
+            </section>
+        </main>
     <footer class="footer"> 
         <nav class="footer-nav"> 
             <a href="#" class="footer-nav_about">About</a>

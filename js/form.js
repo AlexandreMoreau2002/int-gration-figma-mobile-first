@@ -1,7 +1,5 @@
 // test du fichier :
 // console.log("hello")
-
-
 document.addEventListener('DOMContentLoaded', function () {
       const form = document.querySelector('form[name="contact"]');
 
@@ -14,7 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const phone = document.getElementById('Tel').value;
             const message = document.getElementById('Text').value;
 
-            // Vérifier que tous les champs ont été remplis
+
+            // const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
+            // const emailRegex = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
+            // const nameRegex = /^[a-zA-Z ]+$/;
+
+
+            // Vérifier que tous les champs ont été remplis, et qu'ils sont bien aux normes d'un formulaire
             if (firstName === '' || lastName === '' || email === '' || phone === '' || message === '') {
                   alert('Merci de remplir tous les champs.');
                   return;
